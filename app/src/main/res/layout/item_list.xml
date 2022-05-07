@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+
+    app:cardBackgroundColor="#2C2C2A">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/picture_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/img_1" />
+
+        <TextView
+            android:id="@+id/tvCancion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/picture_image"
+            android:text="Cancion"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnStar"
+            android:visibility="gone"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:background="@android:drawable/star_off"
+            android:backgroundTint="#FFC300">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/tvArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCancion"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/picture_image"
+            android:text="Artista"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvArtist"
+            android:layout_toEndOf="@+id/picture_image"
+            android:text="Genero"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvGender"
+            android:layout_toEndOf="@+id/picture_image"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@android:drawable/ic_media_play"
+                android:backgroundTint="@color/black" />
+
+            <ImageButton
+                android:id="@+id/btnPause"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/ic_media_pause"
+                android:backgroundTint="@color/black" />
+
+            <ImageButton
+                android:id="@+id/btnWsp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/ic_menu_share"
+                android:backgroundTint="@color/black" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
